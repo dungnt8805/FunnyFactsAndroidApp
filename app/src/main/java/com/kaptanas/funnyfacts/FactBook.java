@@ -27,10 +27,9 @@ public class FactBook {
 
         // Randomly select a fact
         // Diziden rastgele fact seçimi
-        Random randomGenerator = new Random();  // Construct a new Random number generator
-        int randomNumber = randomGenerator.nextInt(mFacts.length);
+        Random randomGenerator = new Random(System.currentTimeMillis());  // Construct a new Random number generator
 
-        fact = mFacts[randomNumber];
+        fact = mFacts[ randomGenerator.nextInt(mFacts.length)];
 
         return fact;
     }
